@@ -3,6 +3,13 @@
 # This software is licensed under the terms of the Apache Licence Version 2.0
 # which can be obtained at http://www.apache.org/licenses/LICENSE-2.0.
 
+# Standard MOM6 compiler definitions
+add_definitions( -Duse_libMPI -Duse_netCDF -DSPMD )
+
+if( NOT CMAKE_BUILD_TYPE MATCHES "Debug" )
+  add_definitions( -DNDEBUG )
+endif( )
+
 #######################################################################################
 # Fortran
 #######################################################################################
