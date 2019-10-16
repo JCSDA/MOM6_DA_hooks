@@ -71,6 +71,9 @@ set ( mom6_da_hooks_files
     src/core/write_ocean_obs.F90
 )
 
+if(ECBUILD_INSTALL_FORTRAN_MODULES)
+  install(DIRECTORY ${CMAKE_Fortran_MODULE_DIRECTORY}/${CMAKE_CFG_INTDIR} DESTINATION ${INSTALL_INCLUDE_DIR})
+endif()
 ################################################################################
 # Library
 ################################################################################
