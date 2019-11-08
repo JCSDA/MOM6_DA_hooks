@@ -33,6 +33,10 @@ ecbuild_enable_fortran( REQUIRED )
 ecbuild_use_package( PROJECT fms REQUIRED )
 include_directories( ${FMS_INCLUDE_DIRS} )
 
+# NetCDF
+find_package( NetCDF REQUIRED COMPONENTS Fortran )
+include_directories( ${NETCDF_INCLUDE_DIRS} )
+
 ################################################################################
 # Definitions
 ################################################################################
